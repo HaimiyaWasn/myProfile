@@ -1,0 +1,44 @@
+"use client"
+
+import { useState } from "react";
+
+export default function MobileMenuFAB() {
+  const [openSidebar, setOpenSidebar] = useState(false);
+
+  return (
+    <div className="block md:hidden">
+      <button
+        onClick={() => setOpenSidebar(!openSidebar)}
+        className={`fixed bottom-4 right-4 z-20 flex h-14 w-14 items-center justify-center rounded-full backdrop-blur-md shadow-lg ${
+          openSidebar ? "bg-white" : "bg-blue-600"
+        }`}
+      >
+        <span
+          className={`absolute h-0.5 transition-all duration-500 ease-in-out ${
+            openSidebar
+              ? "w-7 rotate-45 bg-black"
+              : "w-7 -translate-y-2 bg-white"
+          }`}
+        />
+        <span
+          className={`absolute h-0.5 bg-white transition-all duration-500 ease-in-out ${
+            openSidebar ? "opacity-0 scale-0" : "w-5 opacity-100"
+          }`}
+        />
+        <span
+          className={`absolute h-0.5 transition-all duration-500 ease-in-out ${
+            openSidebar
+              ? "w-7 -rotate-45 bg-black"
+              : "w-7 translate-y-2 bg-white"
+          }`}
+        />
+      </button>
+      <div
+        onClick={() => setOpenSidebar(false)}
+        className={`fixed z-10 inset-0 bg-black/40 backdrop-blur-sm transition-all duration-500 ${
+          openSidebar ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+      />
+    </div>
+  );
+}
