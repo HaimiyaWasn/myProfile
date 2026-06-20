@@ -65,7 +65,7 @@ export default function HeroSection() {
                   opacity: [1, 1, 1, 1, 0, 0],
                 }}
                 transition={{
-                  duration: 12,
+                  duration: 17,
                   times: [0, 0.25, 0.5, 0.75, 0.751, 1],
                   ease: "linear",
                   repeat: Infinity,
