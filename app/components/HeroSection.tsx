@@ -57,36 +57,14 @@ export default function HeroSection() {
           {showLine && <DekstopRightLine />}
         </div>
 
-        <div>
-          <svg
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-145"
-            width="580"
-            height="299"
-            viewBox="0 0 580 299"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <motion.path
-              {...lineAnimation}
-              transition={{
-                delay: 1,
-                duration: 10,
-                times: [0, 0.25, 0.5, 0.75, 0.751, 1],
-                ease: "linear",
-                repeat: Infinity,
-              }}
-              d="M62.0022 292.362C18.0022 268.362 16.8928 211.362 7.00222 146.863C0.283892 103.05 -0.997856 74.8622 18.0022 30.3623C37.0023 -14.1375 404.002 1.36244 506.002 30.3626C506.002 30.3626 580.185 56.9926 576.502 93.8626C573.395 124.972 516.502 146.863 516.502 146.863L261.002 156.863C261.002 156.863 263.85 284.52 207.502 292.362C145.543 300.986 140.502 146.863 140.502 146.863C140.502 146.863 118.682 323.279 62.0022 292.362Z"
-              stroke="white"
-              strokeWidth={5}
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
-
         {/* Mobile */}
         <div className="block md:hidden w-full">
           {showLine && <MobileLeftLine />}
           {showLine && <MobileRightLine />}
+        </div>
+
+        <div>
+          
         </div>
 
         {/* Mobile Menu FLoating App Button */}
