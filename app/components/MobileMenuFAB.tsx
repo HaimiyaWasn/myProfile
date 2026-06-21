@@ -34,8 +34,8 @@ export default function MobileMenuFAB() {
         />
       </button>
       <div
-        onClick={() => setOpenSidebar(false)}
-        className={`fixed z-10 inset-0 bg-black/40 backdrop-blur-sm transition-all duration-500 ${
+        // onClick={() => setOpenSidebar(false)}
+        className={`fixed z-10 inset-0 bg-black/65 backdrop-blur-sm transition-all duration-500 ${
           openSidebar ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />

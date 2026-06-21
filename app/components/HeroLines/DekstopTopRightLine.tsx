@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { lineAnimation } from "../Animation/LineAnimation";
 
-export default function DekstopRightLine() {
+export default function DekstopTopRightLine() {
   return (
     <svg
       className="absolute right-0 top-0 max-w-114 h-auto"

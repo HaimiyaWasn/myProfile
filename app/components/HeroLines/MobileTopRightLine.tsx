@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { lineAnimation } from "../Animation/LineAnimation";
 
-export default function MobileRightLine() {
+export default function MobileTopRightLine() {
   return (
     <svg
       className="absolute right-0 top-0 max-w-37.25"

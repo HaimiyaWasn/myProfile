@@ -2,16 +2,14 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "motion/react";
 
-import DekstopLeftLine from "./HeroLines/DekstopLeftLine";
-import DekstopRightLine from "./HeroLines/DekstopRightLine";
-import MobileLeftLine from "./HeroLines/MobileLeftLine";
-import MobileRightLine from "./HeroLines/MobileRightLine";
+import DekstopBottomLeftLine from "./HeroLines/DekstopBottomLeftLine";
+import DekstopTopRightLine from "./HeroLines/DekstopTopRightLine";
+import MobileBottomLeftLine from "./HeroLines/MobileBottomLeftLine";
+import MobileTopRightLine from "./HeroLines/MobileTopRightLine";
 import MobileMenuFAB from "./MobileMenuFAB";
 import BackgroundDekstop from "@/public/img/background/1073991.jpg";
 import BackgroundMobile from "@/public/img/background/1192941.png";
-import { lineAnimation } from "./Animation/LineAnimation";
 
 export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
@@ -20,11 +18,13 @@ export default function HeroSection() {
   useEffect(() => {
     setIsMounted(true);
 
-    const timer = setTimeout(() => {
+    const lineTimer = setTimeout(() => {
       setShowLine(true);
     }, 1500);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(lineTimer);
+    };
   }, []);
 
   return (
@@ -53,18 +53,14 @@ export default function HeroSection() {
 
         {/* Dekstop */}
         <div className="hidden md:block w-full">
-          {showLine && <DekstopLeftLine />}
-          {showLine && <DekstopRightLine />}
+          {showLine && <DekstopBottomLeftLine />}
+          {showLine && <DekstopTopRightLine />}
         </div>
 
         {/* Mobile */}
         <div className="block md:hidden w-full">
-          {showLine && <MobileLeftLine />}
-          {showLine && <MobileRightLine />}
-        </div>
-
-        <div>
-          
+          {showLine && <MobileBottomLeftLine />}
+          {showLine && <MobileTopRightLine />}
         </div>
 
         {/* Mobile Menu FLoating App Button */}
