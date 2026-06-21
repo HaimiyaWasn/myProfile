@@ -22,9 +22,10 @@ export default function MobileTopRightLine() {
             repeat: Infinity,
           }}
           d="M29.1164 1.5C29.1164 1.5 -2.30137 49.8193 10.6164 77.5C21.1164 100 49.1164 45.5 60.1164 58C93.9084 96.4003 43.5496 206.667 90.1164 185.5C128.616 168 149.616 109.5 149.616 109.5"
-          stroke="black"
+          stroke="white"
           strokeWidth={5}
           strokeLinecap="round"
+          shapeRendering="crispEdges"
         />
       </g>
       <defs>

@@ -9,7 +9,6 @@ import DekstopBottomLeftLine from "./HeroLines/DekstopBottomLeftLine";
 import DekstopTopRightLine from "./HeroLines/DekstopTopRightLine";
 import MobileBottomLeftLine from "./HeroLines/MobileBottomLeftLine";
 import MobileTopRightLine from "./HeroLines/MobileTopRightLine";
-import MobileMenuFAB from "./MobileMenuFAB";
 import BackgroundDekstop from "@/public/img/background/1073991.jpg";
 import BackgroundMobile from "@/public/img/background/1192941.png";
 
@@ -61,7 +60,7 @@ export default function HeroSection() {
           }`}
         />
 
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/75" />
 
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center px-6 w-full">
@@ -78,7 +77,7 @@ export default function HeroSection() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: 1,
                 }}
-                className={`text-7xl md:text-9xl text-white uppercase ${archivoBlack.className}`}
+                className={`text-7xl md:text-9xl text-blue-600 uppercase ${archivoBlack.className}`}
               >
                 Hello World!
               </motion.h1>
@@ -97,7 +96,7 @@ export default function HeroSection() {
                 delay: 1.75,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`mt-7 text-3xl md:text-5xl font-semibold ${bebasNeue.className}`}
+              className={`mt-7 text-3xl md:text-5xl text-blue-600 font-semibold ${bebasNeue.className}`}
             >
               Welcome to My Portfolio
             </motion.h2>
