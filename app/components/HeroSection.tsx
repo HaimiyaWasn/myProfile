@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { motion } from "motion/react";
 
 import DekstopBottomLeftLine from "./HeroLines/DekstopBottomLeftLine";
 import DekstopTopRightLine from "./HeroLines/DekstopTopRightLine";
@@ -15,6 +16,8 @@ export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
   const [showLine, setShowLine] = useState(false);
 
+  const [showTextUtama, setShowTextUtama] = useState(false);
+
   useEffect(() => {
     setIsMounted(true);
 
@@ -22,8 +25,13 @@ export default function HeroSection() {
       setShowLine(true);
     }, 1500);
 
+    const textUtamaTimer = setTimeout(() => {
+      setShowTextUtama(true);
+    }, 2000);
+
     return () => {
       clearTimeout(lineTimer);
+      clearTimeout(textUtamaTimer);
     };
   }, []);
 
@@ -50,6 +58,28 @@ export default function HeroSection() {
         />
 
         <div className="absolute inset-0 bg-black/50" />
+
+        {showTextUtama && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center">
+            <div className="text-center px-6">
+              <motion.h1
+                initial={{
+                  pathLength: 0,
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                transition={{
+                  duration: 1,
+                }}
+                className={``}
+              >
+                Hello World!
+              </motion.h1>
+            </div>
+          </div>
+        )}
 
         {/* Dekstop */}
         <div className="hidden md:block w-full">
