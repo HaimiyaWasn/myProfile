@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import { Archivo_Black, Bebas_Neue } from "next/font/google";
 
 import DekstopBottomLeftLine from "./HeroLines/DekstopBottomLeftLine";
 import DekstopTopRightLine from "./HeroLines/DekstopTopRightLine";
@@ -12,26 +13,29 @@ import MobileMenuFAB from "./MobileMenuFAB";
 import BackgroundDekstop from "@/public/img/background/1073991.jpg";
 import BackgroundMobile from "@/public/img/background/1192941.png";
 
+const archivoBlack = Archivo_Black({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
   const [showLine, setShowLine] = useState(false);
-
-  const [showTextUtama, setShowTextUtama] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
 
     const lineTimer = setTimeout(() => {
       setShowLine(true);
-    }, 1500);
-
-    const textUtamaTimer = setTimeout(() => {
-      setShowTextUtama(true);
-    }, 2000);
+    }, 2250);
 
     return () => {
       clearTimeout(lineTimer);
-      clearTimeout(textUtamaTimer);
     };
   }, []);
 
@@ -59,27 +63,46 @@ export default function HeroSection() {
 
         <div className="absolute inset-0 bg-black/50" />
 
-        {showTextUtama && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
-            <div className="text-center px-6">
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <div className="text-center px-6 w-full">
+            <div className="overflow-hidden">
               <motion.h1
                 initial={{
-                  pathLength: 0,
-                  opacity: 0,
+                  y: "150%",
                 }}
                 animate={{
-                  opacity: 1,
+                  y: 0,
                 }}
                 transition={{
-                  duration: 1,
+                  duration: 1.4,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: 1,
                 }}
-                className={``}
+                className={`text-7xl md:text-9xl text-white uppercase ${archivoBlack.className}`}
               >
                 Hello World!
               </motion.h1>
             </div>
+            <motion.h2
+              initial={{
+                opacity: 0,
+                clipPath: "inset(0 100% 0 0)",
+              }}
+              animate={{
+                opacity: 1,
+                clipPath: "inset(0 0% 0 0)",
+              }}
+              transition={{
+                duration: 1,
+                delay: 1.75,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className={`mt-7 text-3xl md:text-5xl font-semibold ${bebasNeue.className}`}
+            >
+              Welcome to My Portfolio
+            </motion.h2>
           </div>
-        )}
+        </div>
 
         {/* Dekstop */}
         <div className="hidden md:block w-full">
