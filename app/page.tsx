@@ -3,7 +3,7 @@ import AboutMe from "./components/AboutMe";
 import MobileMenuFAB from "./components/MobileMenuFAB";
 
 export const metadata = {
-  title: "Wasn Portfolio",
+  title: "Wasn Portfolio | Frontend Developer Specialist",
 };
 
 export default function Home() {

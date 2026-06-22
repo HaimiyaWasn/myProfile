@@ -1,9 +1,21 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function MobileMenuFAB() {
   const [openSidebar, setOpenSidebar] = useState(false);
+
+  useEffect(() => {
+    if (openSidebar) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [openSidebar]);
 
   return (
     <div className="block md:hidden">

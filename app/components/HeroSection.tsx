@@ -115,7 +115,8 @@ export default function HeroSection() {
           {showLine && <MobileBottomLeftLine />}
           {showLine && <MobileTopRightLine />}
         </div>
-
+          
+        {/* Pudding Animation */}
         <PuddingAnimationTopLeft show={showLine} />
       </div>
     </section>
