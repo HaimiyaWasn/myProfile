@@ -12,6 +12,7 @@ import MobileTopRightLine from "./HeroAnimation/MobileTopRightLine";
 import BackgroundDekstop from "@/public/img/background/1073991.jpg";
 import BackgroundMobile from "@/public/img/background/1192941.png";
 import PuddingAnimationTopLeft from "./HeroAnimation/PuddingAnimationTopLeft";
+import TextHeroAnimation from "./Animation/TextHeroAnimation";
 
 const archivoBlack = Archivo_Black({
   weight: "400",
@@ -78,7 +79,7 @@ export default function HeroSection() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: 1,
                 }}
-                className={`text-7xl md:text-9xl text-blue-600 uppercase ${archivoBlack.className}`}
+                className={`text-5xl md:text-7xl text-blue-600 uppercase ${archivoBlack.className}`}
               >
                 Hello World!
               </motion.h1>
@@ -97,7 +98,7 @@ export default function HeroSection() {
                 delay: 1.75,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`mt-7 text-3xl md:text-5xl text-blue-600 font-semibold ${bebasNeue.className}`}
+              className={`mt-5 text-3xl md:text-5xl text-blue-600 font-semibold ${bebasNeue.className}`}
             >
               Welcome to My Portfolio
             </motion.h2>
@@ -118,6 +119,8 @@ export default function HeroSection() {
           
         {/* Pudding Animation */}
         <PuddingAnimationTopLeft show={showLine} />
+
+        <TextHeroAnimation />
       </div>
     </section>
   );
