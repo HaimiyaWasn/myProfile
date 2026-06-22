@@ -30,7 +30,7 @@ export default function TextHeroAnimation() {
             ease: "linear",
           },
         }}
-        className={`absolute bottom-0 whitespace-nowrap leading-none text-[150px] md:text-[300px] text-transparent uppercase ${archivoBlack.className}`}
+        className={`absolute bottom-5 md:bottom-0 whitespace-nowrap leading-none text-[150px] md:text-[300px] text-transparent uppercase ${archivoBlack.className}`}
         style={{
           WebkitTextStroke: "3px rgba(37, 99, 235, 0.3)",
         }}
