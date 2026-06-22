@@ -120,6 +120,7 @@ export default function HeroSection() {
         {/* Pudding Animation */}
         <PuddingAnimationTopLeft show={showLine} />
 
+        {/* Text Hero Berjalan */}
         <TextHeroAnimation />
       </div>
     </section>
