@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Archivo_Black, Bebas_Neue } from "next/font/google";
@@ -28,6 +29,8 @@ export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
   const [showLine, setShowLine] = useState(false);
 
+  const [showNavbar, setShowNavbar] = useState(false);
+
   useEffect(() => {
     setIsMounted(true);
 
@@ -40,8 +43,56 @@ export default function HeroSection() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const triggerPoint = window.innerHeight * 0.5;
+
+      setShowNavbar(window.scrollY > triggerPoint);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleBackToTop = () => {
+    window.history.replaceState({}, "", "/");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <section className="sticky top-0 h-screen overflow-hidden">
+      <motion.header
+        animate={{
+          opacity: showNavbar ? 0 : 1,
+        }}
+        className="absolute top-0 left-0 right-0 z-20 px-6 py-4"
+      >
+        <div className="mx-auto flex justify-between items-center">
+          <Link
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              handleBackToTop();
+            }}
+            className={`text-white text-2xl md:text-3xl ${archivoBlack.className}`}
+          >
+            Haimiya Wasn
+          </Link>
+
+          <nav className="hidden md:flex gap-6 text-white font-semibold">
+            <a href="#about-me">About Me</a>
+            <a href="#">Tech Stack</a>
+            <a href="#">Project</a>
+          </nav>
+        </div>
+      </motion.header>
       <div className="relative h-full">
         <Image
           src={BackgroundDekstop}
@@ -116,7 +167,7 @@ export default function HeroSection() {
           {showLine && <MobileBottomLeftLine />}
           {showLine && <MobileTopRightLine />}
         </div>
-          
+
         {/* Pudding Animation */}
         <PuddingAnimationTopLeft show={showLine} />
 
