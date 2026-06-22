@@ -6,26 +6,37 @@ const archivoBlack = Archivo_Black({
   subsets: ["latin"],
 });
 
-export default function TextHeroAnimation() {
+type TextHeroAnimationProps = {
+  show: boolean;
+}
+
+export default function TextHeroAnimation({
+  show,
+}: TextHeroAnimationProps) {
   return (
-    <div className="absolute inset-0 flex items-end overflow-hidden pointer-events-none">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <motion.h3
         initial={{
           opacity: 0,
-          x: "100%",
+          x: "50%",
         }}
-        animate={{
-          opacity: 1,
-          x: ["100%", "-100%"],
-        }}
+        animate={
+          show
+            ? {
+                opacity: 1,
+                x: ["50%", "-100%"],
+              }
+            : {
+                opacity: 0,
+                x: "50%",
+              }
+        }
         transition={{
           opacity: {
             duration: 0.3,
-            delay: 1.75,
           },
           x: {
-            delay: 2,
-            duration: 20,
+            duration: 15,
             repeat: Infinity,
             ease: "linear",
           },

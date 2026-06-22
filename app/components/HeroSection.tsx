@@ -12,7 +12,7 @@ import MobileTopRightLine from "./HeroAnimation/MobileTopRightLine";
 import BackgroundDekstop from "@/public/img/background/1073991.jpg";
 import BackgroundMobile from "@/public/img/background/1192941.png";
 import PuddingAnimationTopLeft from "./HeroAnimation/PuddingAnimationTopLeft";
-import TextHeroAnimation from "./Animation/TextHeroAnimation";
+import TextHeroAnimation from "./HeroAnimation/TextHeroAnimation";
 
 const archivoBlack = Archivo_Black({
   weight: "400",
@@ -121,7 +121,7 @@ export default function HeroSection() {
         <PuddingAnimationTopLeft show={showLine} />
 
         {/* Text Hero Berjalan */}
-        <TextHeroAnimation />
+        <TextHeroAnimation show={showLine} />
       </div>
     </section>
   );

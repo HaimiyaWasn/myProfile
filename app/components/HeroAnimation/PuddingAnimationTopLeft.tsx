@@ -40,12 +40,12 @@ export default function PuddingAnimationTopLeft({
           ease: [0.22, 1, 0.36, 1],
         },
         borderRadius: {
-          duration: 20,
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut",
         },
       }}
-      className="absolute -left-24 -top-32 w-64 h-72 md:-left-40 md:-top-50 md:w-150 md:h-125 bg-blue-600 shadow-[0_0_40px_rgba(37,99,235,0.25)] drop-shadow-[0_0_25px_rgba(37,99,235,0.3)]"
+      className="absolute -left-24 -top-32 w-64 h-72 md:-left-40 md:-top-48 md:w-150 md:h-125 bg-blue-600 shadow-[0_0_40px_rgba(37,99,235,0.25)] drop-shadow-[0_0_25px_rgba(37,99,235,0.3)]"
     />
   );
 }
