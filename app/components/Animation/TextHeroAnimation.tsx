@@ -25,7 +25,7 @@ export default function TextHeroAnimation() {
           },
           x: {
             delay: 2,
-            duration: 15,
+            duration: 20,
             repeat: Infinity,
             ease: "linear",
           },
