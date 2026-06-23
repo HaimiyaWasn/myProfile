@@ -22,7 +22,7 @@ export default function DekstopTopRightLine() {
             repeat: Infinity,
           }}
           d="M72.8652 1C72.8652 1 -31.7309 89.3247 23.7013 124.692C79.7941 160.482 144.193 78.2363 220.935 91.7566C371.832 118.341 20.1657 295.907 158.468 342.435C295.034 388.379 457.5 178.122 457.5 178.122"
-          stroke="white"
+          stroke="#2563EB"
           strokeWidth={5}
           strokeLinecap="round"
           shapeRendering="crispEdges"
@@ -50,7 +50,7 @@ export default function DekstopTopRightLine() {
           <feComposite in2="hardAlpha" operator="out" />
           <feColorMatrix
             type="matrix"
-            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"
+            values="0 0 0 0 0.145098 0 0 0 0 0.388235 0 0 0 0 0.921569 0 0 0 0.5 0"
           />
           <feBlend
             mode="normal"

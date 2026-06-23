@@ -53,7 +53,7 @@ export default function NavbarFixedPortfolio() {
           transition={{
             duration: 0.5,
           }}
-          className="fixed top-0 right-0 left-0 z-20 backdrop-blur-md bg-black/30 px-6 py-4"
+          className="fixed top-0 right-0 left-0 z-10 backdrop-blur-md bg-black/30 px-6 py-4"
         >
           <div className="mx-auto flex justify-between items-center">
             <Link

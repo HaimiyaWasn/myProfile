@@ -31,7 +31,24 @@ export default function HeroSection() {
 
   const [showNavbar, setShowNavbar] = useState(false);
 
-  const menuNavbars = ["About Me", "Tech Stack", "Project"]
+  const menuNavbars = [
+    {
+      label: "About Me",
+      href: "#about-me",
+    },
+    {
+      label: "Tech Stack",
+      href: "#about-me",
+    },
+    {
+      label: "Works Project",
+      href: "#about-me",
+    },
+    {
+      label: "Contact",
+      href: "#about-me",
+    },
+  ]
 
   useEffect(() => {
     setIsMounted(true);
@@ -88,19 +105,17 @@ export default function HeroSection() {
             <motion.span
               initial={{
                 opacity: 0,
-                rotate: -15,
-                filter: "blur(8px)",
+                skewX: 50,
                 clipPath: "inset(0 50% 0 50%)",
               }}
               animate={{
                 opacity: 1,
-                rotate: 0,
-                filter: "blur(0px)",
+                skewX: 0,
                 clipPath: "inset(0 0% 0 0%)",
               }}
               transition={{
                 delay: 2.25,
-                duration: 1.25,
+                duration: 1,
                 ease: [0.22, 1, 0.36, 1],
               }}
               className={`inline-block text-white text-2xl md:text-3xl ${archivoBlack.className}`}
@@ -112,8 +127,8 @@ export default function HeroSection() {
           <nav className="hidden md:flex gap-6 text-white font-semibold">
             {menuNavbars.map((menu, index) => (
               <motion.a
-                key={menu}
-                href="#"
+                key={menu.label}
+                href={menu.href}
                 initial={{
                   opacity: 0,
                   y: -50,
@@ -123,11 +138,11 @@ export default function HeroSection() {
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.5,
-                  delay: 2.25 + index * 0.25,
+                  duration: 0.75,
+                  delay: 2.25 + index * 0.5,
                 }}
               >
-                {menu}
+                {menu.label}
               </motion.a>
             ))}
           </nav>
