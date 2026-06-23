@@ -1,6 +1,8 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
+
+import FillFABMenu from "./FillFABMenu";
 
 export default function MobileMenuFAB() {
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -51,6 +53,12 @@ export default function MobileMenuFAB() {
           openSidebar ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
+
+      {openSidebar && (
+        <div className="fixed inset-0 z-10">
+          <FillFABMenu onClose={() => setOpenSidebar(false)} />
+        </div>
+      )}
     </div>
   );
 }

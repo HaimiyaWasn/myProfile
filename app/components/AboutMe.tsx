@@ -14,7 +14,7 @@ const archivoBlack = Archivo_Black({
 export default function AboutMe() {
   return (
     <section
-      className="relative bg-white py-7 md:py-12 px-7 md:px-17"
+      className="relative bg-white py-7 md:py-12 px-7 md:px-17 scroll-mt-15"
       id="about-me"
     >
       <div className="space-y-10">
@@ -52,7 +52,7 @@ export default function AboutMe() {
             y: 0,
           }}
           transition={{
-            duration: 1,
+            duration: 0.75,
             delay: 0.5,
             ease: [0.22, 1, 0.36, 1],
           }}
@@ -77,7 +77,7 @@ export default function AboutMe() {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 viewport={{
-                  once: true,
+                  once: false,
                   margin: "-15% 0px -15% 0px",
                 }}
               >
