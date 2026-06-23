@@ -13,6 +13,25 @@ const archivoBlack = Archivo_Black({
 export default function NavbarFixedPortfolio() {
   const [showNavbar, setShowNavbar] = useState(false);
 
+  const menuNavbars = [
+    {
+      label: "About Me",
+      href: "#about-me",
+    },
+    {
+      label: "Tech Stack",
+      href: "#about-me",
+    },
+    {
+      label: "Works Project",
+      href: "#about-me",
+    },
+    {
+      label: "Contact",
+      href: "#about-me",
+    },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       setShowNavbar(window.scrollY > window.innerHeight * 0.5);
@@ -27,7 +46,7 @@ export default function NavbarFixedPortfolio() {
 
   const handleBackToTop = () => {
     window.history.replaceState({}, "", "/");
-  
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -68,9 +87,15 @@ export default function NavbarFixedPortfolio() {
             </Link>
 
             <nav className="hidden md:flex gap-6 text-white font-semibold">
-              <a href="#about-me">About Me</a>
-              <a href="#">Tech Stack</a>
-              <a href="#">Project</a>
+              {menuNavbars.map((menu) => (
+                <a
+                  key={menu.label}
+                  href={menu.href}
+                  className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:origin-left after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-x-100"
+                >
+                  {menu.label}
+                </a>
+              ))}
             </nav>
           </div>
         </motion.header>
