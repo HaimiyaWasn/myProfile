@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 import FillFABMenu from "./FillFABMenu";
 
@@ -20,10 +21,16 @@ export default function MobileMenuFAB() {
   }, [openSidebar]);
 
   return (
-    <div className="block md:hidden">
+    <motion.div 
+      transition={{
+        duration: 1,
+        delay: 0.5,
+      }}
+      className="flex md:hidden "
+    >
       <button
         onClick={() => setOpenSidebar(!openSidebar)}
-        className={`fixed bottom-4 right-4 z-20 flex h-14 w-14 items-center justify-center rounded-full backdrop-blur-md shadow-lg ${
+        className={`fixed bottom-4 right-4 z-20 flex h-14 w-14 items-center justify-center rounded-full shadow-lg ${
           openSidebar ? "bg-white" : "bg-blue-600"
         }`}
       >
@@ -47,9 +54,10 @@ export default function MobileMenuFAB() {
           }`}
         />
       </button>
+      
       <div
         // onClick={() => setOpenSidebar(false)}
-        className={`fixed z-10 inset-0 bg-black/65 backdrop-blur-sm transition-all duration-500 ${
+        className={`fixed z-10 inset-0 bg-black/75 backdrop-blur-md transition-all duration-500 ${
           openSidebar ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       />
@@ -59,6 +67,6 @@ export default function MobileMenuFAB() {
           <FillFABMenu onClose={() => setOpenSidebar(false)} />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 }

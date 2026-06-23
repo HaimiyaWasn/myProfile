@@ -123,7 +123,7 @@ export default function HeroSection() {
             </motion.span>
           </Link>
 
-          <nav className="hidden md:flex gap-6 text-white font-semibold">
+          <nav className={`hidden lg:flex gap-4 text-white ${archivoBlack.className}`}>
             {menuNavbars.map((menu, index) => (
               <motion.a
                 key={menu.label}
