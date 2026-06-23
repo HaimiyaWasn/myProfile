@@ -31,6 +31,8 @@ export default function HeroSection() {
 
   const [showNavbar, setShowNavbar] = useState(false);
 
+  const menuNavbars = ["About Me", "Tech Stack", "Project"]
+
   useEffect(() => {
     setIsMounted(true);
 
@@ -63,8 +65,8 @@ export default function HeroSection() {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
-    })
-  }
+    });
+  };
 
   return (
     <section className="sticky top-0 h-screen overflow-hidden">
@@ -83,13 +85,51 @@ export default function HeroSection() {
             }}
             className={`text-white text-2xl md:text-3xl ${archivoBlack.className}`}
           >
-            Haimiya Wasn
+            <motion.span
+              initial={{
+                opacity: 0,
+                rotate: -15,
+                filter: "blur(8px)",
+                clipPath: "inset(0 50% 0 50%)",
+              }}
+              animate={{
+                opacity: 1,
+                rotate: 0,
+                filter: "blur(0px)",
+                clipPath: "inset(0 0% 0 0%)",
+              }}
+              transition={{
+                delay: 2.25,
+                duration: 1.25,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className={`inline-block text-white text-2xl md:text-3xl ${archivoBlack.className}`}
+            >
+              Haimiya Wasn
+            </motion.span>
           </Link>
 
           <nav className="hidden md:flex gap-6 text-white font-semibold">
-            <a href="#about-me">About Me</a>
-            <a href="#">Tech Stack</a>
-            <a href="#">Project</a>
+            {menuNavbars.map((menu, index) => (
+              <motion.a
+                key={menu}
+                href="#"
+                initial={{
+                  opacity: 0,
+                  y: -50,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: 2.25 + index * 0.25,
+                }}
+              >
+                {menu}
+              </motion.a>
+            ))}
           </nav>
         </div>
       </motion.header>
