@@ -22,7 +22,7 @@ export default function AboutMe() {
           initial={{
             opacity: 0,
             clipPath: "inset(0 100% 0 0)",
-            x: -50,
+            x: -20,
           }}
           whileInView={{
             opacity: 1,
