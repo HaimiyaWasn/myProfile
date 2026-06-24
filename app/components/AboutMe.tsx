@@ -14,7 +14,7 @@ const archivoBlack = Archivo_Black({
 export default function AboutMe() {
   return (
     <section
-      className="relative bg-white py-10 md:py-40 px-7 md:px-17 scroll-mt-15"
+      className="relative bg-white min-h-[calc(100vh-50px)] flex flex-col justify-around py-10 md:py-0 px-7 md:px-17 scroll-mt-15"
       id="about-me"
     >
       <div className="space-y-10">
@@ -60,7 +60,7 @@ export default function AboutMe() {
             once: false,
             margin: "-15% 0px -15% 0px",
           }}
-          className="grid md:grid-cols-2 gap-7 items-center max-w-7xl mx-auto"
+          className="grid md:grid-cols-2 gap-7 items-center max-w-7xl mx-auto mb-0 md:mb-10"
         >
           <div className="flex justify-center">
             <div className="p-2 border-4 border-black rounded-tr-2xl rounded-b-2xl overflow-hidden">
