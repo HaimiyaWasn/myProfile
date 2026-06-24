@@ -29,6 +29,8 @@ export default function HeroSection() {
   const [isMounted, setIsMounted] = useState(false);
   const [showLine, setShowLine] = useState(false);
 
+  const [isClikable, setIsClickable] = useState(false);
+
   const [showNavbar, setShowNavbar] = useState(false);
 
   const menuNavbars = [
@@ -85,6 +87,14 @@ export default function HeroSection() {
     });
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsClickable(true);
+    }, 2750);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="sticky top-0 h-screen overflow-hidden">
       <motion.header
@@ -100,6 +110,7 @@ export default function HeroSection() {
               e.preventDefault();
               handleBackToTop();
             }}
+            className={isClikable ? "pointer-events-auto" : "pointer-events-none"}
           >
             <motion.span
               initial={{
