@@ -1,25 +1,26 @@
-"use client"
+"use client";
 
-import { Archivo_Black } from "next/font/google";
 import { motion } from "motion/react";
+import { Archivo_Black } from "next/font/google";
+
 
 const archivoBlack = Archivo_Black({
   weight: "400",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export default function TechStack() {
   return (
-    <section 
+    <section
       className="relative bg-blue-600 py-7 md:py-12 px-7 md:px-17 scroll-mt-15"
-      id="tech-stack"
+      id="about-me"
     >
       <div className="space-y-10">
         <motion.h1
           initial={{
             opacity: 0,
             clipPath: "inset(0 100% 0 0)",
-            x: -50,
+            x: -20,
           }}
           whileInView={{
             opacity: 1,
@@ -40,5 +41,5 @@ export default function TechStack() {
         </motion.h1>
       </div>
     </section>
-  )
+  );
 }
