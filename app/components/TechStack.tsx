@@ -173,7 +173,7 @@ export default function TechStack() {
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="flex h-full flex-col">
-          <div className="pt-20 md:pt-28 px-7 md:px-17 mb-8">
+          <div className="pt-16 md:pt-24 px-7 md:px-17 mb-16">
             <motion.h1
               initial={{
                 opacity: 0,
