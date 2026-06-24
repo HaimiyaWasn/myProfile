@@ -38,7 +38,7 @@ export default function HeroSection() {
     },
     {
       label: "Tech Stack",
-      href: "#about-me",
+      href: "#tech-stack",
     },
     {
       label: "Works Project",

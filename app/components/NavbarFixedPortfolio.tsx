@@ -20,7 +20,7 @@ export default function NavbarFixedPortfolio() {
     },
     {
       label: "Tech Stack",
-      href: "#about-me",
+      href: "#tech-stack",
     },
     {
       label: "Works Project",

@@ -2,6 +2,7 @@ import HeroSection from "./components/HeroSection";
 import AboutMe from "./components/AboutMe";
 import MobileMenuFAB from "./components/MobileMenuFAB";
 import NavbarFixedPortfolio from "./components/NavbarFixedPortfolio";
+import TechStack from "./components/TechStack";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
 
       <HeroSection />
       <AboutMe />
+      <TechStack />
 
       {/* Mobile Menu FLoating App Button */}
       <MobileMenuFAB />

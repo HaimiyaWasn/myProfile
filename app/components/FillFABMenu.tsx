@@ -24,7 +24,7 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
     },
     {
       label: "Tech Stack",
-      href: "#about-me",
+      href: "#tech-stack",
     },
     {
       label: "Works Project",
@@ -37,13 +37,12 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
   ];
 
   useEffect(() => {
-    const totalTime =
-      (menuFillNavs.length - 1) * 0.15 + 0.75;
-  
+    const totalTime = (menuFillNavs.length - 1) * 0.15 + 0.75;
+
     const timer = setTimeout(() => {
       setNavDone(true);
     }, totalTime * 1000);
-  
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -53,7 +52,8 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
 
   return (
     <motion.div className="flex min-h-screen flex-col px-8 py-15">
-        <nav className="flex flex-col gap-10 mb-32">
+      <div className="space-y-20">
+        <nav className="flex flex-col gap-10 mb-20">
           {menuFillNavs.map((menu, index) => (
             <div key={menu.label} className="overflow-hidden">
               <motion.a
@@ -79,41 +79,37 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
           ))}
         </nav>
 
-        <div className="flex flex-col flex-1 gap-7">
-          <motion.div
-            initial={{
-              scaleX: 0,
-            }}
-            animate={{
-              scaleX: navDone ? 1 : 0,
-            }}
-            transition={{
-              duration: 0.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="h-px bg-gray-600 origin-left"
-          />
+        <motion.div
+          initial={{
+            scaleX: 0,
+          }}
+          animate={{
+            scaleX: navDone ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="h-px bg-gray-600 origin-left"
+        />
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 50,
-            }}
-            animate={{
-              opacity: menuOpen ? 1 : 0,
-              y: menuOpen ? 0 : 50,
-            }}
-            transition={{
-              duration: 0.5,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="flex items-center justify-between"
-          >
-            <h1 className={`text-3xl ${archivoBlack.className}`}>
-              Haimiya Wasn
-            </h1>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: menuOpen ? 1 : 0,
+          }}
+          transition={{
+            duration: 0.5,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="flex items-center justify-between"
+        >
+          <h1 className={`text-xl ${archivoBlack.className}`}>Haimiya Wasn</h1>
+          
+        </motion.div>
+      </div>
     </motion.div>
   );
 }
