@@ -15,7 +15,7 @@ export default function ProjectPortfolio() {
   return (
     <section
     id="works-project"
-      className="relative bg-slate-900 min-h-screen flex flex-col justify-center px-7 md:px-16"
+      className="relative bg-slate-900 min-h-screen flex flex-col justify-center px-7 md:px-16 py-18"
     >
       <motion.h1
         initial={{
