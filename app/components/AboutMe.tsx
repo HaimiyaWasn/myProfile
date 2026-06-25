@@ -14,7 +14,7 @@ const archivoBlack = Archivo_Black({
 export default function AboutMe() {
   return (
     <section
-      className="relative bg-white min-h-screen flex flex-col justify-around px-7 md:px-17 py-18"
+      className="relative bg-slate-900 min-h-screen flex flex-col justify-around px-7 md:px-17 py-18"
       id="about-me"
     >
       <div className="space-y-10">
@@ -37,7 +37,7 @@ export default function AboutMe() {
             duration: 1,
             ease: [0.77, 0, 0.175, 1],
           }}
-          className={`text-3xl md:text-5xl text-black pb-3 ${archivoBlack.className}`}
+          className={`text-3xl md:text-5xl text-white pb-3 ${archivoBlack.className}`}
         >
           About Me
         </motion.h1>
@@ -63,7 +63,7 @@ export default function AboutMe() {
           className="grid md:grid-cols-2 gap-7 items-center max-w-7xl mx-auto mb-0 md:mb-10"
         >
           <div className="flex justify-center">
-            <div className="p-2 border-4 border-black rounded-tr-2xl rounded-b-2xl overflow-hidden">
+            <div className="p-2 border-4 border-white rounded-tr-2xl rounded-b-2xl overflow-hidden">
               <motion.div
                 initial={{
                   clipPath: "polygon(0 0, 0 0, -15% 100%, 0 100%)",
@@ -94,7 +94,7 @@ export default function AboutMe() {
           </div>
 
           <div className="max-w-xl">
-            <p className="text-lg md:text-xl text-black text-justify">
+            <p className="text-lg md:text-xl text-white text-justify">
               <span className="font-bold text-blue-600">
                 Hi, I'm Haimiya Wasn, or simply Wasn.
               </span>{" "}
