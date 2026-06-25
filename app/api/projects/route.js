@@ -10,7 +10,7 @@ const baseProject = [
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     demoLink: "https://o2h-website.vercel.app/",
     githubLink: "https://github.com/HaimiyaWasn/o2h-website",
-  }
+  },
 ];
 
 export async function GET() {

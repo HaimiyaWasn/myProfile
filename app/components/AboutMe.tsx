@@ -98,10 +98,12 @@ export default function AboutMe() {
               <span className="font-bold text-blue-600">
                 Hi, I'm Haimiya Wasn, or simply Wasn.
               </span>{" "}
-              I am a Frontend Developer with a background in Full-Stack
-              Development and around 11 months of professional experience at
-              Zi.Care (PT. Jejaring Tiga Artha). I specialize in React,
-              TypeScript, Next.js, and Tailwind CSS, focusing on building
+              I am a <span className="font-bold">Frontend Developer</span>,{" "}
+              <span className="font-bold">Content Creator</span>, and{" "}
+              <span className="font-bold">Web Novelist</span> with a background
+              in Full-Stack Development and around 11 months of professional
+              experience at Zi.Care (PT. Jejaring Tiga Artha). I specialize in
+              React, TypeScript, Next.js, and Tailwind CSS, focusing on building
               responsive, user-friendly, and visually appealing web
               applications. Previously, I worked with Laravel, PHP, Vue.js, and
               Phalcon, which helped me develop a strong understanding of both
