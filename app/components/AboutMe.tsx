@@ -14,7 +14,7 @@ const archivoBlack = Archivo_Black({
 export default function AboutMe() {
   return (
     <section
-      className="relative bg-white min-h-[calc(100vh-50px)] flex flex-col justify-around py-10 md:py-0 px-7 md:px-17 scroll-mt-15"
+      className="relative bg-white min-h-screen flex flex-col justify-around px-7 md:px-17"
       id="about-me"
     >
       <div className="space-y-10">
@@ -37,7 +37,7 @@ export default function AboutMe() {
             duration: 1,
             ease: [0.77, 0, 0.175, 1],
           }}
-          className={`text-3xl md:text-5xl text-black ${archivoBlack.className}`}
+          className={`text-3xl md:text-5xl text-black pb-3 ${archivoBlack.className}`}
         >
           About Me
         </motion.h1>

@@ -165,7 +165,7 @@ export default function TechStack() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-blue-600 scroll-mt-15"
+      className="relative bg-blue-600"
       style={{
         height: sectionHeight,
       }}
@@ -193,7 +193,7 @@ export default function TechStack() {
                 duration: 1,
                 ease: [0.77, 0, 0.175, 1],
               }}
-              className={`text-3xl md:text-5xl text-white ${archivoBlack.className}`}
+              className={`text-3xl md:text-5xl text-white pb-3 ${archivoBlack.className}`}
             >
               Tech Stack
             </motion.h1>
