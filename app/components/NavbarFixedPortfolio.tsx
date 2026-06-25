@@ -24,7 +24,7 @@ export default function NavbarFixedPortfolio() {
     },
     {
       label: "Works Project",
-      href: "#about-me",
+      href: "#works-project",
     },
     {
       label: "Contact",

@@ -44,7 +44,7 @@ export default function HeroSection() {
     },
     {
       label: "Works Project",
-      href: "#about-me",
+      href: "#works-project",
     },
     {
       label: "Contact",
