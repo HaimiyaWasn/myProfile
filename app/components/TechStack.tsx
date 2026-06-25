@@ -204,11 +204,28 @@ export default function TechStack() {
               style={{ x }}
               className="flex gap-6 pl-7 md:pl-17"
             >
-              {techStack.map((tech) => {
+              {techStack.map((tech, index) => {
                 const Icon = tech.icon;
 
                 return (
-                  <div
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                      y: 50,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    viewport={{
+                      once: false,
+                      margin: "-15% 0px -15% 0px",
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.05,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                     key={tech.number}
                     className="relative shrink-0 w-70 md:w-85 h-90 md:h-107.5 rounded-3xl bg-white border overflow-hidden p-7"
                     style={{
@@ -237,7 +254,7 @@ export default function TechStack() {
                         style={{ backgroundColor: tech.color }}
                       />
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
               <div className="w-8 md:w-16 shrink-0" />
