@@ -16,7 +16,30 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Haimiya Wasn | Frontend Developer Specialist",
-  description: "My Profile Portfolio",
+  description: "Personal portfolio showcasing my projects, skills, and experience as a Frontend Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
+
+  openGraph: {
+    title: "Haimiya Wasn | Frontend Developer Specialist",
+    description: "Personal portfolio showcasing my projects, skills, and experience as a Frontend Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
+    url: "https://wasnportfolio.vercel.app/",
+    siteName: "Wasn Potfolio",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Wasn Portfolio",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Haimiya Wasn | Frontend Developer Specialist",
+    description: "Personal portfolio showcasing my projects, skills, and experience as a Frontend Developer specializing in React, Next.js, TypeScript, and modern web technologies.",
+    images: ["/og-image.jpg"]
+  }
 };
 
 export default function RootLayout({
