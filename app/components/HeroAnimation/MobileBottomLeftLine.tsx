@@ -29,7 +29,7 @@ export default function MobileBottomLeftLine() {
           C129.787 206.989 72.5015 168.121 57.5005 125.157
           C44.9454 89.1982 115.195 58.1096 93.0005 27.157
           C74.4829 1.33253 35.9078 -2.58471 7.50049 11.657"
-          stroke="white"
+          stroke="#2563EB"
           strokeWidth={5}
           strokeLinecap="round"
           shapeRendering="crispEdges"
@@ -57,7 +57,7 @@ export default function MobileBottomLeftLine() {
           <feComposite in2="hardAlpha" operator="out" />
           <feColorMatrix
             type="matrix"
-            values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"
+            values="0 0 0 0 0.145098 0 0 0 0 0.388235 0 0 0 0 0.921569 0 0 0 0.5 0"
           />
           <feBlend
             mode="normal"

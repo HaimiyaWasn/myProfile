@@ -215,7 +215,7 @@ export default function HeroSection() {
                 delay: 1.75,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className={`mt-5 text-3xl md:text-5xl text-blue-600 font-semibold ${bebasNeue.className}`}
+              className={`mt-5 text-3xl md:text-5xl text-white font-semibold ${bebasNeue.className}`}
             >
               Welcome to My Portfolio
             </motion.h2>
