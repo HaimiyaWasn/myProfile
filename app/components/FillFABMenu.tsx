@@ -28,7 +28,7 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
     },
     {
       label: "Works Project",
-      href: "#about-me",
+      href: "#works-project",
     },
     {
       label: "Contact",

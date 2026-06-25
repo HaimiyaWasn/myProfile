@@ -14,7 +14,7 @@ const archivoBlack = Archivo_Black({
 export default function AboutMe() {
   return (
     <section
-      className="relative bg-white min-h-screen flex flex-col justify-around px-7 md:px-17"
+      className="relative bg-white min-h-screen flex flex-col justify-around px-7 md:px-17 py-18"
       id="about-me"
     >
       <div className="space-y-10">
