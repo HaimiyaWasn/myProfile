@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Archivo_Black } from "next/font/google";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 import Project1 from "@/public/img/projectPortfolio/Project1.jpg";
 
@@ -11,10 +12,10 @@ const archivoBlack = Archivo_Black({
   subsets: ["latin"],
 });
 
-export default function ProjectPortfolio() {
+export default function ProjectPortfolioCLient() {
   return (
     <section
-    id="works-project"
+      id="works-project"
       className="relative bg-slate-900 min-h-screen flex flex-col justify-center px-7 md:px-16 py-18"
     >
       <motion.h1
@@ -94,11 +95,14 @@ export default function ProjectPortfolio() {
               </span>
             ))}
           </div>
-          <div className="pt-4">
-            <button
-              className="px-6 py-3 rounded-full bg-blue-600 text-white transition hover:bg-blue-500"
-            >
-              View Project →
+          <div className="pt-4 flex flex-col md:flex-row gap-4">
+            <button className="flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-medium transition-all duration-300 hover:bg-blue-500 hover:-translate-y-1">
+              View Demo
+              <FiExternalLink size={18} />
+            </button>
+            <button className="flex-1 flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-slate-600 bg-transparent text-white transition-all hover:bg-slate-800 hover:-translate-y-1">
+              View Github
+              <FiGithub size={18} />
             </button>
           </div>
         </div>
