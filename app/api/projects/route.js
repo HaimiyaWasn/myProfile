@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 const baseProject = [
   {
     id: 1,
+    image: "/img/projectPortfolio/Project1.jpg",
     label: "Frontend Development",
     title: "O2H Official Site",
     description: "Personal portfolio website for Orang-orangan Halimawan (O2H) developed using Next.js and Tailwind CSS with a modern, responsive, and interactive user experience.",
