@@ -173,8 +173,8 @@ export default function TechStack() {
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         <div className="flex h-full flex-col">
-          <div className="pt-24 md:pt-24 px-7 md:px-17 mb-16">
-            <motion.h1
+          <div className="pt-24 px-7 md:px-17 mb-16">
+            <motion.div
               initial={{
                 opacity: 0,
                 x: -25,
@@ -185,17 +185,24 @@ export default function TechStack() {
               }}
               viewport={{
                 once: false,
-                margin: "-3% 0px -3% 0px",
               }}
               transition={{
                 duration: 1,
-                ease: [0.77, 0, 0.175, 1],
+                ease: [0.22, 1, 0.36, 1],
               }}
-              className={`text-3xl md:text-5xl text-white pb-3 ${archivoBlack.className}`}
             >
-              Tech Stack
-            </motion.h1>
+              <h1
+                className={`text-4xl md:text-6xl text-white mb-4 ${archivoBlack.className}`}
+              >
+                Tech Stack
+              </h1>
+              <p className="text-blue-100 max-w-2xl">
+                Technologies and tools I use to build modern, scalable, and
+                user-friendly web applications.
+              </p>
+            </motion.div>
           </div>
+
           <div className="overflow-hidden">
             <motion.div
               ref={trackRef}
@@ -207,6 +214,7 @@ export default function TechStack() {
 
                 return (
                   <motion.div
+                    key={tech.number}
                     initial={{
                       opacity: 0,
                       y: 50,
@@ -224,7 +232,6 @@ export default function TechStack() {
                       delay: index * 0.05,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    key={tech.number}
                     className="relative shrink-0 w-70 md:w-85 h-90 md:h-107.5 rounded-3xl bg-white border overflow-hidden p-7"
                     style={{
                       borderColor: `${tech.color}33`,
@@ -243,6 +250,9 @@ export default function TechStack() {
                     <div className="absolute bottom-7 left-7">
                       <h2
                         className={`text-2xl md:text-3xl ${archivoBlack.className}`}
+                        style={{
+                          color: tech.color
+                        }}
                       >
                         {tech.name}
                       </h2>
