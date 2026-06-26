@@ -89,7 +89,7 @@ export default function ProjectPortfolioCLient({ projects }: Props) {
               whileHover={{
                 y: -7,
               }}
-              className="group relative grid grid-cols-1 md:grid-cols-2 gap-8 rounded-3xl border border-white/25 bg-white/ backdrop-blur-md overflow-hidden p-5 md:p-7"
+              className="group relative grid grid-cols-1 md:grid-cols-2 gap-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden p-5 md:p-7"
             >
               <span
                 className={`absolute hidden md:flex right-6 text-[120px] md:text-[180px] text-white/5 leading-none pointer-events-none ${archivoBlack.className}`}

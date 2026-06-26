@@ -4,7 +4,7 @@ const baseJourney = [
   {
     id: 1,
     year: 2023,
-    title: "Frontend Developer",
+    title: "Basic Learning",
     description:
       "Studied and understood the fundamentals of HTML, CSS, and JavaScript, while practicing by developing school-related projects using PHP-based Laravel.",
   },
@@ -13,7 +13,7 @@ const baseJourney = [
     year: 2024,
     title: "Professional Experience Internship at Zi.Care",
     description:
-      "Developed a hospital web application to facilitate the integration and transmission of data to PeduliLindungi using Phalcon and Vue.js.",
+      "Developed a hospital web application to facilitate the integration and transmission of data to PeduliLindungi using Phalcon PHP and Vue.js.",
   },
   {
     id: 3,

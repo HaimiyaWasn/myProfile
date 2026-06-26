@@ -129,7 +129,12 @@ export default function AboutMe() {
                 <strong>React</strong>,<strong> TypeScript</strong>,
                 <strong> Next.js</strong>, and
                 <strong> Tailwind CSS</strong>, focusing on building responsive,
-                user-friendly, and visually appealing web applications.
+                user-friendly, and visually appealing web applications. Previously, I worked with{" "}
+                <strong>Laravel</strong>, <strong>PHP</strong>, <strong>Vue.js</strong>, and <strong>Phalcon</strong>, 
+                which helped me develop a strong understanding of both frontend and backend development. 
+                My goal is to keep growing as a{" "}
+                <strong>Frontend Developer</strong> and create web experiences that are enjoyable
+                and accessible for everyone.
               </p>
             </div>
 
