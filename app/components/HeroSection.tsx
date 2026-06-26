@@ -47,8 +47,8 @@ export default function HeroSection() {
       href: "#works-project",
     },
     {
-      label: "Contact",
-      href: "#about-me",
+      label: "Personal Journey",
+      href: "#personal-journey",
     },
   ];
 

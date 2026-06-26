@@ -177,12 +177,10 @@ export default function TechStack() {
             <motion.h1
               initial={{
                 opacity: 0,
-                clipPath: "inset(0 100% 0 0)",
-                x: -20,
+                x: -25,
               }}
               whileInView={{
                 opacity: 1,
-                clipPath: "inset(0 0% 0 0)",
                 x: 0,
               }}
               viewport={{

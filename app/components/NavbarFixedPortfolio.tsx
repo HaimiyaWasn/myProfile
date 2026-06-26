@@ -27,8 +27,8 @@ export default function NavbarFixedPortfolio() {
       href: "#works-project",
     },
     {
-      label: "Contact",
-      href: "#about-me",
+      label: "Personal Journey",
+      href: "#personal-journey",
     },
   ];
 
@@ -67,7 +67,7 @@ export default function NavbarFixedPortfolio() {
           }}
           exit={{
             opacity: 0,
-            y: -50,
+            y: -25,
           }}
           transition={{
             duration: 0.5,
