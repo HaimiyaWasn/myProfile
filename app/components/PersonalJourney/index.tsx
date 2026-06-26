@@ -4,7 +4,7 @@ import PersonalJourneyClient from "./client"
 
 type Journey = {
   id: number,
-  year: number,
+  year: number | string,
   title: string,
   description: string,
 };
