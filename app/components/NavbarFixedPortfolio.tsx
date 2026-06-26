@@ -81,7 +81,7 @@ export default function NavbarFixedPortfolio() {
                 e.preventDefault();
                 handleBackToTop();
               }}
-              className={`text-white text-lg md:text-xl ${archivoBlack.className}`}
+              className={`text-white text-lg md:text-xl hover:opacity-75 transition-opacity duration-300 ${archivoBlack.className}`}
             >
               Haimiya Wasn
             </Link>

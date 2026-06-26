@@ -110,7 +110,7 @@ export default function HeroSection() {
               e.preventDefault();
               handleBackToTop();
             }}
-            className={isClikable ? "pointer-events-auto" : "pointer-events-none"}
+            className={`hover:opacity-75 transition-opacity duration-300 ${isClikable ? "pointer-events-auto" : "pointer-events-none"}`}
           >
             <motion.span
               initial={{
