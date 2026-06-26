@@ -149,7 +149,7 @@ export default function HeroSection() {
                 }}
                 transition={{
                   duration: 0.75,
-                  delay: 2.25 + index * 0.5,
+                  delay: 2.25 + index * 0.25,
                 }}
                 className="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-white after:origin-left after:scale-x-0 after:transition-transform after:duration-500 hover:after:scale-x-100"
               >
