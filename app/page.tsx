@@ -5,6 +5,7 @@ import NavbarFixedPortfolio from "./components/NavbarFixedPortfolio";
 import TechStack from "./components/TechStack";
 import ProjectPortfolio from "./components/ProjectPortfolio";
 import PersonalJourney from "./components/PersonalJourney";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
       <TechStack />
       <ProjectPortfolio />
       <PersonalJourney />
+
+      <Footer />
 
       {/* Mobile Menu FLoating App Button */}
       <MobileMenuFAB />
