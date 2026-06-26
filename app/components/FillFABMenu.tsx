@@ -52,8 +52,8 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
 
   return (
     <motion.div className="flex min-h-screen flex-col px-8 py-15">
-      <div className="space-y-20">
-        <nav className="flex flex-col gap-10 mb-20">
+      <div className="space-y-12">
+        <nav className="flex flex-col gap-10 mb-12">
           {menuFillNavs.map((menu, index) => (
             <div key={menu.label} className="overflow-hidden">
               <motion.a
@@ -104,10 +104,17 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="flex items-center justify-between"
+          className="flex flex-col justify-between space-y-24"
         >
-          <h1 className={`text-xl ${archivoBlack.className}`}>Haimiya Wasn</h1>
-          
+          <h1 className={`text-3xl ${archivoBlack.className}`}>Haimiya Wasn</h1>
+          <div className="space-y-2">
+            <p className="text-relaxed text-xs opacity-75">
+              Unauthorized reproduction of all published content is prohibited.
+            </p>
+            <p className="opacity-75 text-sm">
+              © 2026 MY PORTFOLIO ALL RIGHTS RESERVED powered by Haimiya Wasn
+            </p>
+          </div>
         </motion.div>
       </div>
     </motion.div>
