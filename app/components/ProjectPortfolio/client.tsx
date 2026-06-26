@@ -6,6 +6,8 @@ import { motion } from "motion/react";
 import { Archivo_Black } from "next/font/google";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
+import CircularText from "../Animation/CircularText";
+
 type ProjectPortfolio = {
   id: number;
   image: string;
@@ -34,6 +36,13 @@ export default function ProjectPortfolioCLient({ projects }: Props) {
     >
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-600/20 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-[120px]" />
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <CircularText
+          text="HAIMIYA*WASN*"
+          className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-10 scale-[2.5]"
+        />
+      </div>
 
       <div className="relative max-w-7xl mx-auto">
         <motion.div
