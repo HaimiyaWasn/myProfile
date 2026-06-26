@@ -1,17 +1,31 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
-import { Archivo_Black } from "next/font/google"
+import { motion } from "motion/react";
+import { Archivo_Black } from "next/font/google";
+
+type Journey = {
+  id: number;
+  year: number;
+  title: string;
+  description: string;
+};
+
+type Props = {
+  journeys: Journey[];
+};
 
 const archivoBlack = Archivo_Black({
   weight: "400",
   subsets: ["latin"],
-})
+});
 
-export default function PersonalJourney() {
+export default function PersonalJourneyClient({ journeys }: Props) {
   return (
-    <section className="relative bg-blue-600 min-h-screen" id="personal-journey">
-      <div>
+    <section
+      className="relative bg-blue-600 min-h-screen"
+      id="personal-journey"
+    >
+      <div className="relative max-w-7xl mx-auto">
         <motion.h1
           initial={{
             opacity: 0,
@@ -19,7 +33,7 @@ export default function PersonalJourney() {
           }}
           whileInView={{
             opacity: 1,
-            y: 0
+            y: 0,
           }}
           viewport={{
             once: false,
@@ -35,5 +49,5 @@ export default function PersonalJourney() {
         </motion.h1>
       </div>
     </section>
-  )
+  );
 }
