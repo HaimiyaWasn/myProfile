@@ -182,13 +182,13 @@ export default function AboutMe() {
               }}
               className="grid grid-cols-1 md:grid-cols-2 gap-4"
             >
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 text-center">
                 <h3 className="text-3xl font-bold text-blue-600">
                   Frontend Development
                 </h3>
                 <p className="text-slate-400 text-sm mt-2">Main Specialist</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 text-center">
                 <h3 className="text-3xl font-bold text-blue-600">Next.js</h3>
                 <p className="text-slate-400 text-sm mt-2">
                   Favorite Framework

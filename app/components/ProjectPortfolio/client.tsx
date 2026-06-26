@@ -40,7 +40,16 @@ export default function ProjectPortfolioCLient({ projects }: Props) {
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <CircularText
           text="HAIMIYA*WASN*"
+          spinDuration={10}
+          className="flex md:hidden absolute top-28 right-0 translate-x-1/2 opacity-5 scale-[1]"
+        />
+        <CircularText
+          text="HAIMIYA*WASN*"
           className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-10 scale-[2.5]"
+        />
+        <CircularText
+          text="HAIMIYA*WASN*"
+          className="flex md:hidden absolute bottom-28 right-0 translate-x-1/2 opacity-5 scale-[1.5]"
         />
       </div>
 
