@@ -22,11 +22,11 @@ const archivoBlack = Archivo_Black({
 export default function PersonalJourneyClient({ journeys }: Props) {
   return (
     <section
-      className="relative bg-blue-600 min-h-screen"
+      className="relative overflow-hidden bg-blue-600 min-h-screen py-24 px-6 md:px-12"
       id="personal-journey"
     >
-      <div className="relative max-w-7xl mx-auto">
-        <motion.h1
+      <div className="relative max-w-7xl mx-auto px-6">
+        <motion.div
           initial={{
             opacity: 0,
             y: 25,
@@ -37,16 +37,23 @@ export default function PersonalJourneyClient({ journeys }: Props) {
           }}
           viewport={{
             once: false,
-            margin: "-3% 0px -3% 0px",
           }}
           transition={{
             duration: 1,
-            ease: [0.77, 0, 0.175, 1],
+            ease: [0.22, 1, 0.36, 1],
           }}
-          className={`text-3xl md:text-5xl text-white pb-3 ${archivoBlack.className}`}
+          className="text-center mb-16"
         >
-          Personal Journey
-        </motion.h1>
+          <h1
+            className={`text-4xl md:text-6xl text-white pb-3 ${archivoBlack.className}`}
+          >
+            Personal Journey
+          </h1>
+          <p className="text-blue-100 max-w-2xl mx-auto">
+            A brief timeline of my growth, experiences, and passion for creating
+            digital products.
+          </p>
+        </motion.div>
       </div>
     </section>
   );
