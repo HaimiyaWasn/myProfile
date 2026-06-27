@@ -11,6 +11,16 @@ const baseProject = [
     demoLink: "https://o2h-website.vercel.app/",
     githubLink: "https://github.com/HaimiyaWasn/o2h-website",
   },
+  {
+    id: 2,
+    image: "/img/projectPortfolio/Project2.jpg",
+    label: "Frontend Development",
+    title: "Randomize Qutoe",
+    description: "A web application that fetches random quotes from an API and allows users to instantly copy their favorite quotes to the clipboard.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    demoLink: "https://randomize-quote.vercel.app/",
+    githubLink: "https://github.com/HaimiyaWasn/randomQuote",
+  },
 ];
 
 export async function GET() {
