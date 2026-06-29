@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Archivo_Black } from "next/font/google";
+import { FaGithub, FaInstagram } from "react-icons/fa";
+import Link from "next/link";
 
 const archivoBlack = Archivo_Black({
   weight: "400",
@@ -16,6 +18,17 @@ type FillFABMenuProps = {
 export default function FillFABMenu({ onClose }: FillFABMenuProps) {
   const [navDone, setNavDone] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const socialLinks = [
+    {
+      href: "https://github.com/HaimiyaWasn",
+      icon: FaGithub,
+    },
+    {
+      href: "https://www.instagram.com/its.haimiyawasn",
+      icon: FaInstagram,
+    },
+  ]
 
   const menuFillNavs = [
     {
@@ -104,16 +117,29 @@ export default function FillFABMenu({ onClose }: FillFABMenuProps) {
             duration: 0.5,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="flex flex-col justify-between space-y-24"
+          className="flex flex-col"
         >
           <h1 className={`text-3xl ${archivoBlack.className}`}>Haimiya Wasn</h1>
-          <div className="space-y-2">
+          <div className="space-y-2 mt-14">
             <p className="text-relaxed text-xs opacity-75">
               Unauthorized reproduction of all published content is prohibited.
             </p>
             <p className="opacity-75 text-sm">
               © 2026 MY PORTFOLIO ALL RIGHTS RESERVED powered by Haimiya Wasn
             </p>
+          </div>
+          <div className="mt-6 flex gap-3">
+            {socialLinks.map(({ href, icon: Icon }, index) => (
+              <Link
+                key={index}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-white active:border-white hover:bg-white active:bg-white hover:text-black active:text-black"
+              >
+                <Icon />
+              </Link>
+            ))}
           </div>
         </motion.div>
       </div>
