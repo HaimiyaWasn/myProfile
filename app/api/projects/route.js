@@ -15,11 +15,11 @@ const baseProject = [
     id: 2,
     image: "/img/projectPortfolio/Project2.jpg",
     label: "Frontend Development",
-    title: "Randomize Quote",
+    title: "QuoteVerse",
     description: "A web application that fetches random quotes from an API and allows users to instantly copy their favorite quotes to the clipboard.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    demoLink: "https://randomize-quote.vercel.app/",
-    githubLink: "https://github.com/HaimiyaWasn/randomQuote",
+    demoLink: "https://quote-verse-blond.vercel.app/",
+    githubLink: "https://github.com/HaimiyaWasn/QuoteVerse",
   },
 ];
 
