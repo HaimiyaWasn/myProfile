@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { Archivo_Black } from "next/font/google";
 
-import ProfileImageAbout from "@/public/img/pofileImage/NagisaKamisiro1.jpeg";
+import ProfileImage from "@/public/img/profileImage/900157044290895991.jpeg";
 import CircularText from "./Animation/CircularText";
 
 const archivoBlack = Archivo_Black({
@@ -108,7 +108,7 @@ export default function AboutMe() {
                   }}
                 >
                   <Image
-                    src={ProfileImageAbout}
+                    src={ProfileImage}
                     alt="Profile Image About"
                     width={350}
                     height={450}
