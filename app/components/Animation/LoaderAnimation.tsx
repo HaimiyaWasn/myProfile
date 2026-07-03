@@ -32,8 +32,8 @@ export default function LoaderAnimation({ onComplete }: LoaderAnimationProps) {
           return 100;
         }
 
-        if (prev < 25) return prev + 2;
-        if (prev < 75) return prev + 1;
+        if (prev < 50) return prev + 2;
+        if (prev < 85) return prev + 1;
 
         return prev + 0.5;
       });

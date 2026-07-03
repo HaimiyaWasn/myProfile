@@ -43,13 +43,11 @@ export default function LoaderProvider({
 
   return (
     <>
-      {showLoader && (
-        <LoaderAnimation 
-          onComplete={handleComplete}
-        />
+      {showLoader ? (
+        <LoaderAnimation onComplete={handleComplete} />
+      ) : (
+        children
       )}
-
-      {children}
     </>
   )
 }
