@@ -18,7 +18,7 @@ const baseProject = [
     title: "QuoteVerse",
     description: "A web application that fetches random quotes from an API and allows users to instantly copy their favorite quotes to the clipboard.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-    demoLink: "https://quote-verse-blond.vercel.app/",
+    demoLink: "https://quote-verse-randomize.vercel.app/",
     githubLink: "https://github.com/HaimiyaWasn/QuoteVerse",
   },
 ];
