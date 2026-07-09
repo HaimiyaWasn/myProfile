@@ -25,7 +25,7 @@ const baseProject = [
     id: 3,
     image: "/img/projectPortfolio/Project3.jpg",
     label: "Frontend Development",
-    title: "Wasnify",
+    title: "Wasnify (Just Working)",
     description: "A clean and intuitive task management application that helps users organize daily tasks, track progress, and stay productive with a modern and responsive interface.",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     demoLink: "https://wasnify-todo-app.vercel.app/",
