@@ -18,8 +18,8 @@ export default function AboutMe() {
       className="relative overflow-hidden bg-slate-900 min-h-screen py-24 px-6 md:px-12"
       id="about-me"
     >
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-600/20 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <CircularText
@@ -49,7 +49,7 @@ export default function AboutMe() {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
           }}
           transition={{
             duration: 1,
@@ -79,7 +79,7 @@ export default function AboutMe() {
               x: 0,
             }}
             viewport={{
-              once: false,
+              once: true,
             }}
             transition={{
               duration: 1,
@@ -90,20 +90,21 @@ export default function AboutMe() {
             <div className="relative">
               <div className="absolute -inset-3 rounded-4xl bg-linear-to-br from-blue-600 to-cyan-500 opacity-30 blur-xl" />
 
-              <div className="relative p-2 rounded-4xl border border-white/10 bg-white/5 backdrop-blur-xl">
+              <div className="relative p-2 rounded-4xl border border-white/10 bg-white/5 backdrop-blur-sm">
                 <motion.div
                   initial={{
-                    clipPath: "polygon(0 0, 0 0, -15% 100%, 0 100%)",
+                    x: "-100%",
+                    opacity: 0,
                   }}
                   whileInView={{
-                    clipPath: "polygon(0 0, 115% 0, 100% 100%, 0 100%)",
+                    x: 0,
+                    opacity: 1,
                   }}
                   viewport={{
-                    once: false,
+                    once: true,
                   }}
                   transition={{
                     duration: 1,
-                    delay: 0.5,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
@@ -129,7 +130,7 @@ export default function AboutMe() {
               x: 0,
             }}
             viewport={{
-              once: false,
+              once: true,
             }}
             transition={{
               duration: 1,
@@ -138,7 +139,7 @@ export default function AboutMe() {
             }}
             className="space-y-8"
           >
-            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8">
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8">
               <h2 className="text-2xl font-bold text-white mb-6">
                 Hi, I'm <span className="text-blue-600">Haimiya Wasn</span>
               </h2>
@@ -173,7 +174,7 @@ export default function AboutMe() {
                 y: 0,
               }}
               viewport={{
-                once: false,
+                once: true,
               }}
               transition={{
                 duration: 1,
@@ -182,13 +183,13 @@ export default function AboutMe() {
               }}
               className="grid grid-cols-1 md:grid-cols-2 gap-4"
             >
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 text-center">
                 <h3 className="text-3xl font-bold text-blue-600">
                   Frontend Development
                 </h3>
                 <p className="text-slate-400 text-sm mt-2">Main Specialist</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-5 text-center">
+              <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5 text-center">
                 <h3 className="text-3xl font-bold text-blue-600">Next.js</h3>
                 <p className="text-slate-400 text-sm mt-2">
                   Favorite Framework

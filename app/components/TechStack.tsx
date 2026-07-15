@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useLayoutEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { Archivo_Black } from "next/font/google";
 import {
@@ -126,7 +126,7 @@ export default function TechStack() {
   const [scrollDistance, setScrollDistance] = useState(0);
   const [sectionHeight, setSectionHeight] = useState("300vh");
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const calculate = () => {
       if (!trackRef.current) return;
 
@@ -136,16 +136,21 @@ export default function TechStack() {
       const distance = Math.max(trackWidth - viewportWidth, 0);
 
       setScrollDistance(distance);
-
       setSectionHeight(`${window.innerHeight + distance}px`);
     };
 
     calculate();
 
-    window.addEventListener("resize", calculate);
+    const handleResize = () => {
+      requestAnimationFrame(calculate);
+    };
+
+    window.addEventListener("resize", handleResize, {
+      passive: true,
+    });
 
     return () => {
-      window.removeEventListener("resize", calculate);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -154,13 +159,7 @@ export default function TechStack() {
     offset: ["start start", "end end"],
   });
 
-  const rawX = useTransform(scrollYProgress, [0, 1], [0, -scrollDistance]);
-
-  const x = useSpring(rawX, {
-    stiffness: 120,
-    damping: 30,
-    mass: 0.4,
-  });
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollDistance]);
 
   return (
     <section
@@ -184,7 +183,7 @@ export default function TechStack() {
                 x: 0,
               }}
               viewport={{
-                once: false,
+                once: true,
               }}
               transition={{
                 duration: 1,
@@ -206,32 +205,18 @@ export default function TechStack() {
           <div className="overflow-hidden">
             <motion.div
               ref={trackRef}
-              style={{ x }}
-              className="flex gap-6 pl-7 md:pl-17"
+              style={{ 
+                x, 
+                willChange: "transform" 
+            }}
+              className="flex gap-6 pl-7 md:pl-17 transform-gpu"
             >
-              {techStack.map((tech, index) => {
+              {techStack.map((tech) => {
                 const Icon = tech.icon;
 
                 return (
-                  <motion.div
+                  <div
                     key={tech.number}
-                    initial={{
-                      opacity: 0,
-                      y: 50,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    viewport={{
-                      once: false,
-                      margin: "-15% 0px -15% 0px",
-                    }}
-                    transition={{
-                      duration: 0.6,
-                      delay: index * 0.05,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
                     className="relative shrink-0 w-70 md:w-85 h-90 md:h-107.5 rounded-3xl bg-white border overflow-hidden p-7"
                     style={{
                       borderColor: `${tech.color}33`,
@@ -244,14 +229,14 @@ export default function TechStack() {
                     </span>
 
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon size={120} style={{ color: tech.color }} />
+                      <Icon className="w-24 h-24 md:w-30 md:h-30" style={{ color: tech.color }} />
                     </div>
 
                     <div className="absolute bottom-7 left-7">
                       <h2
                         className={`text-2xl md:text-3xl ${archivoBlack.className}`}
                         style={{
-                          color: tech.color
+                          color: tech.color,
                         }}
                       >
                         {tech.name}
@@ -262,7 +247,7 @@ export default function TechStack() {
                         style={{ backgroundColor: tech.color }}
                       />
                     </div>
-                  </motion.div>
+                  </div>
                 );
               })}
               <div className="w-8 md:w-16 shrink-0" />
