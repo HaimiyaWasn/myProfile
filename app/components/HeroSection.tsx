@@ -65,13 +65,17 @@ export default function HeroSection() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const triggerPoint = window.innerHeight * 0.5;
+    const triggerPoint = window.innerHeight * 0.5;
 
-      setShowNavbar(window.scrollY > triggerPoint);
+    const handleScroll = () => {
+      const shouldShow = window.scrollY > triggerPoint;
+
+      setShowNavbar(prev => prev != shouldShow ? shouldShow : prev);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
