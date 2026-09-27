@@ -91,7 +91,7 @@ export default function Footer() {
           >
             <div className="space-y-2">
               <p className="text-neutral-500">Email</p>
-              <p className="text-lg">wahyuajisn@gmail.com</p>
+              <p className="text-lg">wasnhaimiya@gmail.com</p>
             </div>
 
             <div className="space-y-2">
